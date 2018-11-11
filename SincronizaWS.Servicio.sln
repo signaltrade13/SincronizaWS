@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SincronizaWS.Servicio", "SincronizaWS.Servicio\", "{A50D1D5D-5E45-4C13-A545-7E34C22056CC}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{24e63bbf-90d6-49d8-be00-98ec74f856d1}|SincronizaWS.Metodos.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52675"
+		Debug.AspNetCompiler.PhysicalPath = "SincronizaWS.Servicio\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52675\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52675"
+		Release.AspNetCompiler.PhysicalPath = "SincronizaWS.Servicio\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52675\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52675"
+		SlnRelativePath = "SincronizaWS.Servicio\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizaWS.Metodos", "SincronizaWS.Metodos\SincronizaWS.Metodos.csproj", "{24E63BBF-90D6-49D8-BE00-98EC74F856D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A50D1D5D-5E45-4C13-A545-7E34C22056CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50D1D5D-5E45-4C13-A545-7E34C22056CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50D1D5D-5E45-4C13-A545-7E34C22056CC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50D1D5D-5E45-4C13-A545-7E34C22056CC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80CED4A7-D49E-43CD-B9B0-F85FFD934ADA}
+	EndGlobalSection
+EndGlobal
