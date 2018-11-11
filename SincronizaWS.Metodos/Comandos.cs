@@ -8,8 +8,9 @@ namespace SincronizaWS.Metodos
 {
     public static class Comandos
     {
+        public static string ConectionString { get; set; }
 
-        static string connString = Properties.Settings.Default.DbConection;
+        static string connString = string.IsNullOrEmpty(ConectionString) ? Properties.Settings.Default.DBConnMagda1 : connString;
 
         enum QMsg { Insertado, Actualizado, Deletado,Ejecutado};
         static Comandos()

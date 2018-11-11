@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Web.Services;
+using System.Configuration;
 using SincronizaWS.Metodos;
 
 [WebService(Namespace = "http://SicroDBService")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 public class SincroDBService : System.Web.Services.WebService
 {
-    public SincroDBService()
-    {
-
-    }
     
     [WebMethod]
     public string SincronizaC_Almacen(decimal AlmacenId, string Almacen, string Ubicacion, string RowGuid)

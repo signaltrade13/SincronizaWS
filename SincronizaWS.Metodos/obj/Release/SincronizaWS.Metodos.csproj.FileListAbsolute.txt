@@ -1,0 +1,8 @@
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\bin\Release\SincronizaWS.Metodos.dll
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\bin\Release\SincronizaWS.Metodos.pdb
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\obj\Release\SincronizaWS.Metodos.csproj.CoreCompileInputs.cache
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\obj\Release\SincronizaWS.Metodos.dll
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\obj\Release\SincronizaWS.Metodos.pdb
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\bin\Release\SincronizaWS.Metodos.dll.config
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\obj\Release\SincronizaWS.Metodos.csprojAssemblyReference.cache
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaWS.Metodos\bin\Release\app.config

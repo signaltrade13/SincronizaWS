@@ -26,11 +26,11 @@ namespace SincronizaWS.Metodos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.13\\AX13;Initial Catalog=MAGDA1;Persist Security Info=True;U" +
-            "ser ID=sa;Password=masterkey")]
-        public string DbConection {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.13\\AX13;Initial Catalog=MAGDA1;User ID=sa;Password=masterke" +
+            "y")]
+        public string DBConnMagda1 {
             get {
-                return ((string)(this["DbConection"]));
+                return ((string)(this["DBConnMagda1"]));
             }
         }
     }
