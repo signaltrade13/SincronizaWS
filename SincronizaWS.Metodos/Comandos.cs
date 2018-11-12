@@ -10,7 +10,7 @@ namespace SincronizaWS.Metodos
     {
         public static string ConectionString { get; set; }
 
-        static string connString = string.IsNullOrEmpty(ConectionString) ? Properties.Settings.Default.DBConnMagda1 : connString;
+        static string connString = string.IsNullOrEmpty(ConectionString) ? Properties.Settings.Default.DBConnMagda1 : ConectionString;
 
         enum QMsg { Insertado, Actualizado, Deletado,Ejecutado};
         static Comandos()
