@@ -8,10 +8,25 @@ namespace SincronizaWS.Metodos
 {
     public static class Comandos
     {
-        public static string ConectionString { get; set; }
+        static string _ConectionString;
 
-        static string connString = string.IsNullOrEmpty(ConectionString) ? Properties.Settings.Default.DBConnMagda1 : ConectionString;
+        public static string ConectionString
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_ConectionString))
+                    return (Properties.Settings.Default.DBConnMagda1);
+                else
+                    return (_ConectionString);
+            }
+            set
+            {
+                _ConectionString = value;
 
+            }           
+                        
+        }
+        
         enum QMsg { Insertado, Actualizado, Deletado,Ejecutado};
         static Comandos()
         {
@@ -23,7 +38,7 @@ namespace SincronizaWS.Metodos
         {
             int n;
 
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(ConectionString))
             {
                 cmd.Connection = conn;
 
@@ -31,6 +46,7 @@ namespace SincronizaWS.Metodos
                 {                    
                     conn.Open();
                     n = Convert.ToInt32(cmd.ExecuteScalar());
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -45,7 +61,7 @@ namespace SincronizaWS.Metodos
 
         private static string ActualizarData(SqlCommand cmd)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(ConectionString))
             {
                 cmd.Connection = conn;
 
@@ -53,6 +69,7 @@ namespace SincronizaWS.Metodos
                 {
                     conn.Open();
                     cmd.ExecuteNonQuery();
+                    conn.Close();
                     return (QMsg.Ejecutado.ToString());
                 }
                 catch (Exception ex)
