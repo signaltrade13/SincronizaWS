@@ -1,0 +1,16 @@
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\app.config
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\SincronizaApp.exe.config
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\SincronizaApp.exe
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\SincronizaApp.pdb
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\SincronizaWS.Metodos.dll
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\SincronizaWS.Metodos.pdb
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\bin\Release\SincronizaWS.Metodos.dll.config
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.csprojAssemblyReference.cache
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.FormMain.resources
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp._MainForm.resources
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.Properties.Resources.resources
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.csproj.GenerateResource.cache
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.csproj.CoreCompileInputs.cache
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.csproj.CopyComplete
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.exe
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\SincronizaApp\obj\Release\SincronizaApp.pdb

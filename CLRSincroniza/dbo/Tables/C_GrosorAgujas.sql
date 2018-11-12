@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[C_GrosorAgujas] (
+    [GrosorID] NUMERIC (18)     IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Grosor]   VARCHAR (50)     NULL,
+    [rowguid]  UNIQUEIDENTIFIER CONSTRAINT [DF__C_GrosorA__rowgu__3BB699D9] DEFAULT (newsequentialid()) ROWGUIDCOL NOT NULL,
+    CONSTRAINT [PK_C_GrosorAgujas] PRIMARY KEY CLUSTERED ([GrosorID] ASC) WITH (FILLFACTOR = 90)
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [index_800773960]
+    ON [dbo].[C_GrosorAgujas]([rowguid] ASC) WITH (FILLFACTOR = 90);
+

@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[C_ModeloAguja] (
+    [ModeloID] NUMERIC (18)     IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Modelo]   VARCHAR (50)     NULL,
+    [rowguid]  UNIQUEIDENTIFIER CONSTRAINT [DF__C_ModeloA__rowgu__2B803210] DEFAULT (newsequentialid()) ROWGUIDCOL NOT NULL,
+    CONSTRAINT [PK_C_ModeloAguja] PRIMARY KEY CLUSTERED ([ModeloID] ASC) WITH (FILLFACTOR = 90)
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [index_768773846]
+    ON [dbo].[C_ModeloAguja]([rowguid] ASC) WITH (FILLFACTOR = 90);
+

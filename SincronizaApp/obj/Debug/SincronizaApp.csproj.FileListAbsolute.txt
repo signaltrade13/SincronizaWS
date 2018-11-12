@@ -1,0 +1,16 @@
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\SincronizaApp.exe.config
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\SincronizaApp.exe
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\SincronizaApp.pdb
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.Properties.Resources.resources
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.csproj.GenerateResource.cache
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.csproj.CoreCompileInputs.cache
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.exe
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.pdb
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.FormMain.resources
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\SincronizaWS.Metodos.dll
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp._MainForm.resources
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.csproj.CopyComplete
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\obj\Debug\SincronizaApp.csprojAssemblyReference.cache
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\app.config
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\SincronizaWS.Metodos.pdb
+C:\images\C99\SincronizaWS.Servicio10\SincronizaApp\bin\Debug\SincronizaWS.Metodos.dll.config

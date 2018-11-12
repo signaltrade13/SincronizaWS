@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[C_MarcasAgujas] (
+    [MarcaID] NUMERIC (18)     IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Marca]   VARCHAR (50)     NULL,
+    [rowguid] UNIQUEIDENTIFIER CONSTRAINT [DF__C_MarcasA__rowgu__31390B66] DEFAULT (newsequentialid()) ROWGUIDCOL NOT NULL,
+    CONSTRAINT [PK_C_MarcasAgujas] PRIMARY KEY CLUSTERED ([MarcaID] ASC) WITH (FILLFACTOR = 90)
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [index_1536776582]
+    ON [dbo].[C_MarcasAgujas]([rowguid] ASC) WITH (FILLFACTOR = 90);
+

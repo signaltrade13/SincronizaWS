@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CLRSincroniza</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{916872f9-4559-413d-949a-c1be0a8a95c6}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CLRSincroniza</RootNamespace>
+    <AssemblyName>CLRSincroniza</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>CLRSincroniza.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CLRSincroniza.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Stored Procedures\sp_etiqueta.sql" />
+    <Build Include="dbo\Tables\C_Almacen.sql" />
+    <Build Include="dbo\Tables\C_AreaModulo.sql" />
+    <Build Include="dbo\Tables\C_Areas.sql" />
+    <Build Include="dbo\Tables\C_AreasRptEstatus.sql" />
+    <Build Include="dbo\Tables\C_Articulos.sql" />
+    <Build Include="dbo\Tables\C_Bihorarios.sql" />
+    <Build Include="dbo\Tables\C_Conceptos.sql" />
+    <Build Include="dbo\Tables\C_ConceptosP.sql" />
+    <Build Include="dbo\Tables\C_EmpresaP.sql" />
+    <Build Include="dbo\Tables\C_Empresas.sql" />
+    <Build Include="dbo\Tables\C_GrosorAgujas.sql" />
+    <Build Include="dbo\Tables\C_Hilos.sql" />
+    <Build Include="dbo\Tables\C_Lineas.sql" />
+    <Build Include="dbo\Tables\C_Maquinaria.sql" />
+    <Build Include="dbo\Tables\C_Marcas.sql" />
+    <Build Include="dbo\Tables\C_MarcasAgujas.sql" />
+    <Build Include="dbo\Tables\C_ModeloAguja.sql" />
+    <Build Include="dbo\Tables\C_Modulos.sql" />
+    <Build Include="dbo\Tables\C_Monedas.sql" />
+    <Build Include="dbo\Tables\C_Operaciones.sql" />
+    <Build Include="dbo\Tables\C_OperacionHilos.sql" />
+    <Build Include="dbo\Tables\C_Pantallas.sql" />
+    <Build Include="dbo\Tables\C_Personal.sql" />
+    <Build Include="dbo\Tables\C_PersonalFechas.sql" />
+    <Build Include="dbo\Tables\C_Proveedores.sql" />
+    <Build Include="dbo\Tables\C_Puestos.sql" />
+    <Build Include="dbo\Tables\C_PuntasAgujas.sql" />
+    <Build Include="dbo\Tables\C_Refacciones.sql" />
+    <Build Include="dbo\Tables\C_Semanas.sql" />
+    <Build Include="dbo\Tables\C_Sueldos.sql" />
+    <Build Include="dbo\Tables\C_Tallas.sql" />
+    <Build Include="dbo\Tables\C_TiposMaquina.sql" />
+    <Build Include="dbo\Tables\C_TiposRegAguja.sql" />
+    <Build Include="dbo\Tables\C_Usuarios.sql" />
+    <Build Include="dbo\Tables\Parametros.sql" />
+    <Build Include="dbo\Tables\rpt_Estatus.sql" />
+    <Build Include="dbo\Tables\T_Agujas.sql" />
+    <Build Include="dbo\Tables\T_Balanceo.sql" />
+    <Build Include="dbo\Tables\T_BalanceoMaq.sql" />
+    <Build Include="dbo\Tables\T_BalanceoOpDet.sql" />
+    <Build Include="dbo\Tables\T_BalanceoOtros.sql" />
+    <Build Include="dbo\Tables\T_BalanceoStaf.sql" />
+    <Build Include="dbo\Tables\T_Bitacora.sql" />
+    <Build Include="dbo\Tables\T_Bultos.sql" />
+    <Build Include="dbo\Tables\T_CostosMonedas.sql" />
+    <Build Include="dbo\Tables\T_Cotizacion.sql" />
+    <Build Include="dbo\Tables\T_CotizacionDet.sql" />
+    <Build Include="dbo\Tables\T_Estilos.sql" />
+    <Build Include="dbo\Tables\T_EstilosDet.sql" />
+    <Build Include="dbo\Tables\T_EstilosDetTeor.sql" />
+    <Build Include="dbo\Tables\T_EstilosHilosDet.sql" />
+    <Build Include="dbo\Tables\T_EstilosHilosDetTeor.sql" />
+    <Build Include="dbo\Tables\T_EstilosMarcas.sql" />
+    <Build Include="dbo\Tables\T_EtiqFecPag.sql" />
+    <Build Include="dbo\Tables\T_Etiquetas.sql" />
+    <Build Include="dbo\Tables\T_Folios.sql" />
+    <Build Include="dbo\Tables\T_HojasControl.sql" />
+    <Build Include="dbo\Tables\T_Inventario.sql" />
+    <Build Include="dbo\Tables\T_MantoMaq.sql" />
+    <Build Include="dbo\Tables\T_MantoMaqDet.sql" />
+    <Build Include="dbo\Tables\T_MovimientosAlm.sql" />
+    <Build Include="dbo\Tables\T_MovimientosAlmacenDet.sql" />
+    <Build Include="dbo\Tables\T_MovimientosMaquinaria.sql" />
+    <Build Include="dbo\Tables\T_Nomina.sql" />
+    <Build Include="dbo\Tables\T_NominaDet.sql" />
+    <Build Include="dbo\Tables\T_OrdenesProduccion.sql" />
+    <Build Include="dbo\Tables\T_OrdEnPlanta.sql" />
+    <Build Include="dbo\Tables\T_OrdenProduccionDet.sql" />
+    <Build Include="dbo\Tables\T_OrdOrdenesProduccion.sql" />
+    <Build Include="dbo\Tables\T_Perfil.sql" />
+    <Build Include="dbo\Tables\T_PersonalConceptos.sql" />
+    <Build Include="dbo\Tables\T_PersonalFaltas.sql" />
+    <Build Include="dbo\Tables\T_PersonalFechas.sql" />
+    <Build Include="dbo\Tables\t_RegistroCorte.sql" />
+    <Build Include="dbo\Tables\Tmp_reporte.sql" />
+    <Build Include="dbo\Tables\TmpParamPant.sql" />
+    <Build Include="dbo\Views\Cs_Etiquetas.sql" />
+    <Build Include="dbo\Views\Cs_Proceso.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WSClass.cs" />
+    <Compile Include="WSConsts.cs" />
+    <Compile Include="XmlClass.cs" />
+    <Compile Include="WSBodys.cs" />
+    <Compile Include="SqlTriggerUpdC_Almacen.cs" />
+    <Compile Include="SqlTriggerUpdC_AreaModulo.cs" />
+    <Compile Include="SqlTriggerUpdC_Areas.cs" />
+    <Compile Include="SqlTriggerUpdC_AreasRptEstatus.cs" />
+    <Compile Include="SqlTriggerUpdC_Articulos.cs" />
+    <Compile Include="SqlTriggerUpdC_Bihorarios.cs" />
+    <Compile Include="SqlTriggerUpdC_Conceptos.cs" />
+    <Compile Include="SqlTriggerUpdC_ConceptosP.cs" />
+    <Compile Include="SqlTriggerUpdC_EmpresaP.cs" />
+    <Compile Include="SqlTriggerUpdC_Empresas.cs" />
+    <Compile Include="SqlTriggerUpdC_GrosorAgujas.cs" />
+    <Compile Include="SqlTriggerUpdC_Hilos.cs" />
+    <Compile Include="SqlTriggerUpdC_Lineas.cs" />
+    <Compile Include="SqlTriggerUpdC_Maquinaria.cs" />
+    <Compile Include="SqlTriggerUpdC_Marcas.cs" />
+    <Compile Include="SqlTriggerUpdC_MarcasAgujas.cs" />
+    <Compile Include="SqlTriggerUpdC_ModeloAguja.cs" />
+    <Compile Include="SqlTriggerUpdC_Modulos.cs" />
+    <Compile Include="SqlTriggerUpdC_Monedas.cs" />
+    <Compile Include="SqlTriggerUpdC_OperacionHilos.cs" />
+    <Compile Include="SqlTriggerUpdC_Operaciones.cs" />
+    <Compile Include="SqlTriggerUpdC_Pantallas.cs" />
+    <Compile Include="SqlTriggerUpdC_Parametros.cs" />
+    <Compile Include="DbHelper.cs" />
+    <Compile Include="SqlTriggerUpdC_Personal.cs" />
+    <Compile Include="SqlTriggerUpdC_PersonalFechas.cs" />
+    <Compile Include="SqlTriggerUpdC_Proveedores.cs" />
+    <Compile Include="SqlTriggerUpdC_Puestos.cs" />
+    <Compile Include="SqlTriggerUpdC_PuntasAgujas.cs" />
+    <Compile Include="SqlTriggerUpdC_Refacciones.cs" />
+    <Compile Include="SqlTriggerUpdC_Semanas.cs" />
+    <Compile Include="SqlTriggerUpdC_Sueldos.cs" />
+    <Compile Include="SqlTriggerUpdC_Tallas.cs" />
+    <Compile Include="SqlTriggerUpdC_TiposMaquina.cs" />
+    <Compile Include="SqlTriggerUpdC_TiposRegAguja.cs" />
+    <Compile Include="SqlTriggerUpdC_Usuarios.cs" />
+    <Compile Include="SqlTriggerUpdT_Agujas.cs" />
+    <Compile Include="SqlTriggerUpdT_Balanceo.cs" />
+    <Compile Include="SqlTriggerUpdT_BalanceoMaq.cs" />
+    <Compile Include="SqlTriggerUpdT_BalanceoOpDet.cs" />
+    <Compile Include="SqlTriggerUpdT_BalanceoOtros.cs" />
+    <Compile Include="SqlTriggerUpdT_BalanceoStaf.cs" />
+    <Compile Include="SqlTriggerUpdT_Bitacora.cs" />
+    <Compile Include="SqlTriggerUpdT_CostosMonedas.cs" />
+    <Compile Include="SqlTriggerUpdT_Cotizacion.cs" />
+    <Compile Include="SqlTriggerUpdT_CotizacionDet.cs" />
+    <Compile Include="SqlTriggerUpdT_Estilos.cs" />
+    <Compile Include="SqlTriggerUpdT_EstilosDet.cs" />
+    <Compile Include="SqlTriggerUpdT_EstilosDetTeor.cs" />
+    <Compile Include="SqlTriggerUpdT_EstilosMarcas.cs" />
+    <Compile Include="SqlTriggerUpdT_EtiqFecPag.cs" />
+    <Compile Include="SqlTriggerUpdT_Etiquetas.cs" />
+    <Compile Include="SqlTriggerUpdT_Folios.cs" />
+    <Compile Include="SqlTriggerUpdT_HojasControl.cs" />
+    <Compile Include="SqlTriggerUpdT_Inventario.cs" />
+    <Compile Include="SqlTriggerUpdT_MantoMaq.cs" />
+    <Compile Include="SqlTriggerUpdT_MantoMaqDet.cs" />
+    <Compile Include="SqlTriggerUpdT_MovimientosAlm.cs" />
+    <Compile Include="SqlTriggerUpdT_MovimientosAlmacenDet.cs" />
+    <Compile Include="SqlTriggerUpdT_MovimientosMaquinaria.cs" />
+    <Compile Include="SqlTriggerUpdT_Nomina.cs" />
+    <Compile Include="SqlTriggerUpdT_NominaDet.cs" />
+    <Compile Include="SqlTriggerUpdT_OrdEnPlanta.cs" />
+    <Compile Include="SqlTriggerUpdT_OrdOrdenesProduccion.cs" />
+    <Compile Include="SqlTriggerUpdT_OrdenProduccionDet.cs" />
+    <Compile Include="SqlTriggerUpdT_OrdenesProduccion.cs" />
+    <Compile Include="SqlTriggerUpdT_Perfil.cs" />
+    <Compile Include="SqlTriggerUpdT_PersonalConceptos.cs" />
+    <Compile Include="SqlTriggerUpdT_PersonalFaltas.cs" />
+    <Compile Include="SqlTriggerUpdT_PersonalFechas.cs" />
+    <Compile Include="SqlTriggerUpdT_RegistroCorte.cs" />
+    <Compile Include="SqlTriggerUpdprpt_Estatus.cs" />
+    <Compile Include="SqlTriggerUpdT_Bultos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

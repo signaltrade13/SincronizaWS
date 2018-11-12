@@ -1,0 +1,3593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://SicroDBService" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://SicroDBService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://SicroDBService">
+      <s:element name="SincronizaC_Almacen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AlmacenId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Almacen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ubicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_AlmacenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_AlmacenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_AreaModulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuloId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AreaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_AreaModuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_AreaModuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Areas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Bono" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_AreasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_AreasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_AreasRptEstatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AreaOrdnId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenDelantero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenTrasero" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_AreasRptEstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_AreasRptEstatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Articulos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ArticuloId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="LineaId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MonedaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="unidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ubicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ArticulosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_ArticulosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Bihorarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BihorarioId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraFin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="CantHrsLab" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraIniReal" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraFinReal" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraIniRealAnt" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="HoraFinRealAnt" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_BihorariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_BihorariosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Conceptos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConceptoId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concepto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ConceptosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_ConceptosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ConceptosP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConceptoPId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Formula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ConceptosPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_ConceptosPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_EmpresaP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmpresaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Dias" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PorMax" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_EmpresaPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_EmpresaPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Empresas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmpresaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreBd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dirección" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rfc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Jornada" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pago" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Porcentajeop" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Porcentajearea" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalPiezas" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_EmpresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_EmpresasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_GrosorAgujas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Grosor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_GrosorAgujasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_GrosorAgujasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Hilos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HiloId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Calibre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CveColor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Prov" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Yardas" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="unidad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_HilosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_HilosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Lineas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LineaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaSolomon" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValidaCatalogo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_LineasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_LineasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Maquinaria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MaquinariaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoMaquinaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoInventario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Modelo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Propiedad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Ubicacion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModuloId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Factor" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConsumoArriba" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConsumoAbajo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaAlta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Rentada" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProveedorId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_MaquinariaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_MaquinariaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Marcas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MarcaId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_MarcasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_MarcasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_MarcasAgujas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_MarcasAgujasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_MarcasAgujasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ModeloAgujas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Modelo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ModeloAgujasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_ModeloAgujasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Modulos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModuloId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Bono" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ModulosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_ModulosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Monedas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MonedaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoCambio" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_MonedasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_MonedasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Operaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumOper" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AreaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoOper" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tiempo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Consumo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoMaquinaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Produccion" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costoop" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SueldoId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Factor" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConsumoArriba" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConsumoAbajo" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costura" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_OperacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_OperacionesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_OperacionHilos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HiloId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Indice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Arriba" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_OperacionHilosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_OperacionHilosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Pantallas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Indice" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Menu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PantallasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_PantallasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Personal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModuloId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SueldoId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AreaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApellidoP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApellidoM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Calle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroExt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Colonia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Poblacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Emergencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TelEmergencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Rfc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FecNac" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Dias" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="PuestoId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PersonalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_PersonalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PersonalFechas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PersonalFechasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_PersonalFechasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Proveedores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_ProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_ProveedoresResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Puestos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PuestoId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Puesto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PuestosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_PuestosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PuntasAgujas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Punta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_PuntasAgujasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_PuntasAgujasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Refacciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RefaccionId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MonedaId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_RefaccionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_RefaccionesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Semanas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SemanaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaFinal" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_SemanasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_SemanasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Sueldos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SueldoId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Categoria" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Bono" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_SueldosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_SueldosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Tallas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TallaId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Largo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ancho" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_TallasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_TallasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_TiposMaquina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TipoMaquinaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Factor" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConsumoArriba" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConsumoAbajo" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_TiposMaquinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_TiposMaquinaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_TiposRegAguja">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReAguja" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoReg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_TiposRegAgujaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_TiposRegAgujaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_Usuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contrasena" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Activo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaC_UsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaC_UsuariosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaParametros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Jornada" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoCambio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaParametrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaParametrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sincronizarpt_Estatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenArea" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sincronizarpt_EstatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sincronizarpt_EstatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Agujas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Folio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaquinariaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MarcaId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModeloId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="GrosorId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PuntaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cancelado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCancel" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_AgujasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_AgujasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Balanceo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceoId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MinTurno" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Produccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcentaje" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_BalanceoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoMaq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceoId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoMaquinaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Invent" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Dif" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoMaqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_BalanceoMaqResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoOpDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceoId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="std" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="stda" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="prodh" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="prodt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="tiempon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="operariost" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="operariorr" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mintd" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="desocu" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="maquinas" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Manuales" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="asistente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bultero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sup" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoOpDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_BalanceoOpDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoOtros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceoId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="renglon" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cant" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoOtrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_BalanceoOtrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoStaf">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceoId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="renglon" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cant" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BalanceoStafResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_BalanceoStafResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Bitacora">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BitacoraId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hora" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_BitacoraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_BitacoraResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizatT_Bultos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BultoId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoBulto" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaEnt" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="TallaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizatT_BultosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizatT_BultosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_CostosMonedas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ArticuloId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlmacenId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MonedaId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Existencia" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntradaUnidad" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntradaValor" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SalidaUnidad" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="SalidaValor" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExtDum" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoPromedio" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoReposicion" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_CostosMonedasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_CostosMonedasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Cotizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CotizacionId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCreacion" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaModificacion" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_CotizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_CotizacionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_CotizacionDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CotizacionId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Equivalencia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HiloId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cod" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Metros" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalConos" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MtsCono" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_CotizacionDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_CotizacionDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Estilos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaAlta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Inactivo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaBaja" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Linea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Division" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="num_metadia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EstilosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Act" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenRpt" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Etapa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EstilosDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosDetTeor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Act" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosDetTeorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EstilosDetTeorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosHilosDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HiloId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Arriba" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Act" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosHilosDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EstilosHilosDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosHilosDetTeor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="HiloId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Arriba" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Act" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosHilosDetTeorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EstilosHilosDetTeorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosMarcas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarcaId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EstilosMarcasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EstilosMarcasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EtiqFecPag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EtiquetaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaPago" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EtiqFecPagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EtiqFecPagResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Etiquetas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EtiquetaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BultoId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="OperacionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Hora" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="HojaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Escaneada" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cancelada" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_EtiquetasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_EtiquetasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Folios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Folio" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_FoliosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_FoliosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_HojasControl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HojaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_HojasControlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_HojasControlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Inventario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ArticuloId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlmacenId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Existencia" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntradaUnidad" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="EntradaValor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="SalidaUnidad" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SalidaValor" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExtDum" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoPromedio" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoReposicion" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_InventarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_InventarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MantoMaq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MantoId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaquinariaId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cancelado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MotCancelado" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCancel" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="MonedaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoCambio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MantoMaqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_MantoMaqResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MantoMaqDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MantoId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="RefaccionId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CostoPesos" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoCambio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MantoMaqDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_MantoMaqDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MovimientosAlm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MomientoId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlmacenId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalU" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalC" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MonedaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalCDef" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cancelado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Aplicado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoCambio" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MovimientosAlmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_MovimientosAlmResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MovimientosAlmacenDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MovimientoId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ArticloId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Importe" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MovimientosAlmacenDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_MovimientosAlmacenDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MovimientosMaquinaria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MovimientoId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaquinariaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConceptoId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Origen" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Destino" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrega" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Recibe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Autoriza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transportista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Observaciones" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cancelado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCancel" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_MovimientosMaquinariaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_MovimientosMaquinariaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Nomina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NominaId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Semana" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaFin" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalNomina" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cancelado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCancel" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceoId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_NominaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_NominaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_NominaDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NominaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConceptoPId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Importe" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_NominaDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_NominaDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdenesProduccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoPo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OV" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaAlta" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EstiloId" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCierre" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCancel" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cancelado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Planta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tela" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaCorte" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="id_periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdenesProduccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_OrdenesProduccionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdEnPlanta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdEnPlantaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_OrdEnPlantaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdenProduccionDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Renglon" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TallaId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoBultos" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NPiezasXBulto" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdenProduccionDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_OrdenProduccionDetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdOrdenesProduccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Orden" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Periodo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Auditoria" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_OrdOrdenesProduccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_OrdOrdenesProduccionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_Perfil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UsuarioId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PantallaId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Alta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Baja" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cambio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Consulta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Depurar" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Firma" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Imprimir" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PerfilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_PerfilResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PersonalConceptos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConceptoPid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Importe" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PersonalConceptosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_PersonalConceptosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PersonalFaltas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PersonalFaltasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_PersonalFaltasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PersonalFechas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonalId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_PersonalFechasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_PersonalFechasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_RegistroCorte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BihorarioId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrdenId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="piezas" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SincronizaT_RegistroCorteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SincronizaT_RegistroCorteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SincronizaC_AlmacenSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Almacen" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AlmacenSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_AlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AreaModuloSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_AreaModulo" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AreaModuloSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_AreaModuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AreasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Areas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AreasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_AreasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AreasRptEstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_AreasRptEstatus" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_AreasRptEstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_AreasRptEstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ArticulosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Articulos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ArticulosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ArticulosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_BihorariosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Bihorarios" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_BihorariosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_BihorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ConceptosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Conceptos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ConceptosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ConceptosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ConceptosPSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ConceptosP" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ConceptosPSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ConceptosPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_EmpresaPSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_EmpresaP" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_EmpresaPSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_EmpresaPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_EmpresasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Empresas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_EmpresasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_EmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_GrosorAgujasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_GrosorAgujas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_GrosorAgujasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_GrosorAgujasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_HilosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Hilos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_HilosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_HilosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_LineasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Lineas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_LineasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_LineasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MaquinariaSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Maquinaria" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MaquinariaSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_MaquinariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MarcasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Marcas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MarcasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_MarcasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MarcasAgujasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_MarcasAgujas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MarcasAgujasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_MarcasAgujasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ModeloAgujasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ModeloAgujas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ModeloAgujasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ModeloAgujasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ModulosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Modulos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ModulosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ModulosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MonedasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Monedas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_MonedasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_MonedasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_OperacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Operaciones" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_OperacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_OperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_OperacionHilosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_OperacionHilos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_OperacionHilosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_OperacionHilosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PantallasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Pantallas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PantallasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PantallasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PersonalSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Personal" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PersonalSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PersonalResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PersonalFechasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PersonalFechas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PersonalFechasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PersonalFechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Proveedores" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_ProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_ProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PuestosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Puestos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PuestosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PuestosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PuntasAgujasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PuntasAgujas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_PuntasAgujasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_PuntasAgujasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_RefaccionesSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Refacciones" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_RefaccionesSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_RefaccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_SemanasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Semanas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_SemanasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_SemanasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_SueldosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Sueldos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_SueldosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_SueldosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_TallasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Tallas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_TallasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_TallasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_TiposMaquinaSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_TiposMaquina" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_TiposMaquinaSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_TiposMaquinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_TiposRegAgujaSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_TiposRegAguja" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_TiposRegAgujaSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_TiposRegAgujaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_UsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaC_Usuarios" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaC_UsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaC_UsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaParametrosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaParametros" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaParametrosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sincronizarpt_EstatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Sincronizarpt_Estatus" />
+  </wsdl:message>
+  <wsdl:message name="Sincronizarpt_EstatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Sincronizarpt_EstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_AgujasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Agujas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_AgujasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_AgujasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Balanceo" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoMaqSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoMaq" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoMaqSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoMaqResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoOpDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoOpDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoOpDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoOpDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoOtrosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoOtros" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoOtrosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoOtrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoStafSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoStaf" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BalanceoStafSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BalanceoStafResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BitacoraSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Bitacora" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_BitacoraSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_BitacoraResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizatT_BultosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizatT_Bultos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizatT_BultosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizatT_BultosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_CostosMonedasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_CostosMonedas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_CostosMonedasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_CostosMonedasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_CotizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Cotizacion" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_CotizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_CotizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_CotizacionDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_CotizacionDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_CotizacionDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_CotizacionDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Estilos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosDetTeorSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosDetTeor" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosDetTeorSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosDetTeorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosHilosDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosHilosDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosHilosDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosHilosDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosHilosDetTeorSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosHilosDetTeor" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosHilosDetTeorSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosHilosDetTeorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosMarcasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosMarcas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EstilosMarcasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EstilosMarcasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EtiqFecPagSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EtiqFecPag" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EtiqFecPagSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EtiqFecPagResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EtiquetasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Etiquetas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_EtiquetasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_EtiquetasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_FoliosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Folios" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_FoliosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_FoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_HojasControlSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_HojasControl" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_HojasControlSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_HojasControlResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_InventarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Inventario" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_InventarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_InventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MantoMaqSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MantoMaq" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MantoMaqSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MantoMaqResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MantoMaqDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MantoMaqDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MantoMaqDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MantoMaqDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MovimientosAlmSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MovimientosAlm" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MovimientosAlmSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MovimientosAlmResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MovimientosAlmacenDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MovimientosAlmacenDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MovimientosAlmacenDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MovimientosAlmacenDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MovimientosMaquinariaSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MovimientosMaquinaria" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_MovimientosMaquinariaSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_MovimientosMaquinariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_NominaSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Nomina" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_NominaSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_NominaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_NominaDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_NominaDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_NominaDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_NominaDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdenesProduccionSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdenesProduccion" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdenesProduccionSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdenesProduccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdEnPlantaSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdEnPlanta" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdEnPlantaSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdEnPlantaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdenProduccionDetSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdenProduccionDet" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdenProduccionDetSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdenProduccionDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdOrdenesProduccionSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdOrdenesProduccion" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_OrdOrdenesProduccionSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_OrdOrdenesProduccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PerfilSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_Perfil" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PerfilSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PerfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PersonalConceptosSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PersonalConceptos" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PersonalConceptosSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PersonalConceptosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PersonalFaltasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PersonalFaltas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PersonalFaltasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PersonalFaltasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PersonalFechasSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PersonalFechas" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_PersonalFechasSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_PersonalFechasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_RegistroCorteSoapIn">
+    <wsdl:part name="parameters" element="tns:SincronizaT_RegistroCorte" />
+  </wsdl:message>
+  <wsdl:message name="SincronizaT_RegistroCorteSoapOut">
+    <wsdl:part name="parameters" element="tns:SincronizaT_RegistroCorteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SincroDBServiceSoap">
+    <wsdl:operation name="SincronizaC_Almacen">
+      <wsdl:input message="tns:SincronizaC_AlmacenSoapIn" />
+      <wsdl:output message="tns:SincronizaC_AlmacenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_AreaModulo">
+      <wsdl:input message="tns:SincronizaC_AreaModuloSoapIn" />
+      <wsdl:output message="tns:SincronizaC_AreaModuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Areas">
+      <wsdl:input message="tns:SincronizaC_AreasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_AreasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_AreasRptEstatus">
+      <wsdl:input message="tns:SincronizaC_AreasRptEstatusSoapIn" />
+      <wsdl:output message="tns:SincronizaC_AreasRptEstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Articulos">
+      <wsdl:input message="tns:SincronizaC_ArticulosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_ArticulosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Bihorarios">
+      <wsdl:input message="tns:SincronizaC_BihorariosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_BihorariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Conceptos">
+      <wsdl:input message="tns:SincronizaC_ConceptosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_ConceptosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_ConceptosP">
+      <wsdl:input message="tns:SincronizaC_ConceptosPSoapIn" />
+      <wsdl:output message="tns:SincronizaC_ConceptosPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_EmpresaP">
+      <wsdl:input message="tns:SincronizaC_EmpresaPSoapIn" />
+      <wsdl:output message="tns:SincronizaC_EmpresaPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Empresas">
+      <wsdl:input message="tns:SincronizaC_EmpresasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_EmpresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_GrosorAgujas">
+      <wsdl:input message="tns:SincronizaC_GrosorAgujasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_GrosorAgujasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Hilos">
+      <wsdl:input message="tns:SincronizaC_HilosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_HilosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Lineas">
+      <wsdl:input message="tns:SincronizaC_LineasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_LineasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Maquinaria">
+      <wsdl:input message="tns:SincronizaC_MaquinariaSoapIn" />
+      <wsdl:output message="tns:SincronizaC_MaquinariaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Marcas">
+      <wsdl:input message="tns:SincronizaC_MarcasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_MarcasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_MarcasAgujas">
+      <wsdl:input message="tns:SincronizaC_MarcasAgujasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_MarcasAgujasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_ModeloAgujas">
+      <wsdl:input message="tns:SincronizaC_ModeloAgujasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_ModeloAgujasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Modulos">
+      <wsdl:input message="tns:SincronizaC_ModulosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_ModulosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Monedas">
+      <wsdl:input message="tns:SincronizaC_MonedasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_MonedasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Operaciones">
+      <wsdl:input message="tns:SincronizaC_OperacionesSoapIn" />
+      <wsdl:output message="tns:SincronizaC_OperacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_OperacionHilos">
+      <wsdl:input message="tns:SincronizaC_OperacionHilosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_OperacionHilosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Pantallas">
+      <wsdl:input message="tns:SincronizaC_PantallasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_PantallasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Personal">
+      <wsdl:input message="tns:SincronizaC_PersonalSoapIn" />
+      <wsdl:output message="tns:SincronizaC_PersonalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_PersonalFechas">
+      <wsdl:input message="tns:SincronizaC_PersonalFechasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_PersonalFechasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Proveedores">
+      <wsdl:input message="tns:SincronizaC_ProveedoresSoapIn" />
+      <wsdl:output message="tns:SincronizaC_ProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Puestos">
+      <wsdl:input message="tns:SincronizaC_PuestosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_PuestosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_PuntasAgujas">
+      <wsdl:input message="tns:SincronizaC_PuntasAgujasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_PuntasAgujasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Refacciones">
+      <wsdl:input message="tns:SincronizaC_RefaccionesSoapIn" />
+      <wsdl:output message="tns:SincronizaC_RefaccionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Semanas">
+      <wsdl:input message="tns:SincronizaC_SemanasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_SemanasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Sueldos">
+      <wsdl:input message="tns:SincronizaC_SueldosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_SueldosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Tallas">
+      <wsdl:input message="tns:SincronizaC_TallasSoapIn" />
+      <wsdl:output message="tns:SincronizaC_TallasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_TiposMaquina">
+      <wsdl:input message="tns:SincronizaC_TiposMaquinaSoapIn" />
+      <wsdl:output message="tns:SincronizaC_TiposMaquinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_TiposRegAguja">
+      <wsdl:input message="tns:SincronizaC_TiposRegAgujaSoapIn" />
+      <wsdl:output message="tns:SincronizaC_TiposRegAgujaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Usuarios">
+      <wsdl:input message="tns:SincronizaC_UsuariosSoapIn" />
+      <wsdl:output message="tns:SincronizaC_UsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaParametros">
+      <wsdl:input message="tns:SincronizaParametrosSoapIn" />
+      <wsdl:output message="tns:SincronizaParametrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sincronizarpt_Estatus">
+      <wsdl:input message="tns:Sincronizarpt_EstatusSoapIn" />
+      <wsdl:output message="tns:Sincronizarpt_EstatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Agujas">
+      <wsdl:input message="tns:SincronizaT_AgujasSoapIn" />
+      <wsdl:output message="tns:SincronizaT_AgujasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Balanceo">
+      <wsdl:input message="tns:SincronizaT_BalanceoSoapIn" />
+      <wsdl:output message="tns:SincronizaT_BalanceoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoMaq">
+      <wsdl:input message="tns:SincronizaT_BalanceoMaqSoapIn" />
+      <wsdl:output message="tns:SincronizaT_BalanceoMaqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoOpDet">
+      <wsdl:input message="tns:SincronizaT_BalanceoOpDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_BalanceoOpDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoOtros">
+      <wsdl:input message="tns:SincronizaT_BalanceoOtrosSoapIn" />
+      <wsdl:output message="tns:SincronizaT_BalanceoOtrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoStaf">
+      <wsdl:input message="tns:SincronizaT_BalanceoStafSoapIn" />
+      <wsdl:output message="tns:SincronizaT_BalanceoStafSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Bitacora">
+      <wsdl:input message="tns:SincronizaT_BitacoraSoapIn" />
+      <wsdl:output message="tns:SincronizaT_BitacoraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizatT_Bultos">
+      <wsdl:input message="tns:SincronizatT_BultosSoapIn" />
+      <wsdl:output message="tns:SincronizatT_BultosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_CostosMonedas">
+      <wsdl:input message="tns:SincronizaT_CostosMonedasSoapIn" />
+      <wsdl:output message="tns:SincronizaT_CostosMonedasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Cotizacion">
+      <wsdl:input message="tns:SincronizaT_CotizacionSoapIn" />
+      <wsdl:output message="tns:SincronizaT_CotizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_CotizacionDet">
+      <wsdl:input message="tns:SincronizaT_CotizacionDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_CotizacionDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Estilos">
+      <wsdl:input message="tns:SincronizaT_EstilosSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EstilosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosDet">
+      <wsdl:input message="tns:SincronizaT_EstilosDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EstilosDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosDetTeor">
+      <wsdl:input message="tns:SincronizaT_EstilosDetTeorSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EstilosDetTeorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosHilosDet">
+      <wsdl:input message="tns:SincronizaT_EstilosHilosDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EstilosHilosDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosHilosDetTeor">
+      <wsdl:input message="tns:SincronizaT_EstilosHilosDetTeorSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EstilosHilosDetTeorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosMarcas">
+      <wsdl:input message="tns:SincronizaT_EstilosMarcasSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EstilosMarcasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EtiqFecPag">
+      <wsdl:input message="tns:SincronizaT_EtiqFecPagSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EtiqFecPagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Etiquetas">
+      <wsdl:input message="tns:SincronizaT_EtiquetasSoapIn" />
+      <wsdl:output message="tns:SincronizaT_EtiquetasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Folios">
+      <wsdl:input message="tns:SincronizaT_FoliosSoapIn" />
+      <wsdl:output message="tns:SincronizaT_FoliosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_HojasControl">
+      <wsdl:input message="tns:SincronizaT_HojasControlSoapIn" />
+      <wsdl:output message="tns:SincronizaT_HojasControlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Inventario">
+      <wsdl:input message="tns:SincronizaT_InventarioSoapIn" />
+      <wsdl:output message="tns:SincronizaT_InventarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MantoMaq">
+      <wsdl:input message="tns:SincronizaT_MantoMaqSoapIn" />
+      <wsdl:output message="tns:SincronizaT_MantoMaqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MantoMaqDet">
+      <wsdl:input message="tns:SincronizaT_MantoMaqDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_MantoMaqDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosAlm">
+      <wsdl:input message="tns:SincronizaT_MovimientosAlmSoapIn" />
+      <wsdl:output message="tns:SincronizaT_MovimientosAlmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosAlmacenDet">
+      <wsdl:input message="tns:SincronizaT_MovimientosAlmacenDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_MovimientosAlmacenDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosMaquinaria">
+      <wsdl:input message="tns:SincronizaT_MovimientosMaquinariaSoapIn" />
+      <wsdl:output message="tns:SincronizaT_MovimientosMaquinariaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Nomina">
+      <wsdl:input message="tns:SincronizaT_NominaSoapIn" />
+      <wsdl:output message="tns:SincronizaT_NominaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_NominaDet">
+      <wsdl:input message="tns:SincronizaT_NominaDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_NominaDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdenesProduccion">
+      <wsdl:input message="tns:SincronizaT_OrdenesProduccionSoapIn" />
+      <wsdl:output message="tns:SincronizaT_OrdenesProduccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdEnPlanta">
+      <wsdl:input message="tns:SincronizaT_OrdEnPlantaSoapIn" />
+      <wsdl:output message="tns:SincronizaT_OrdEnPlantaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdenProduccionDet">
+      <wsdl:input message="tns:SincronizaT_OrdenProduccionDetSoapIn" />
+      <wsdl:output message="tns:SincronizaT_OrdenProduccionDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdOrdenesProduccion">
+      <wsdl:input message="tns:SincronizaT_OrdOrdenesProduccionSoapIn" />
+      <wsdl:output message="tns:SincronizaT_OrdOrdenesProduccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Perfil">
+      <wsdl:input message="tns:SincronizaT_PerfilSoapIn" />
+      <wsdl:output message="tns:SincronizaT_PerfilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalConceptos">
+      <wsdl:input message="tns:SincronizaT_PersonalConceptosSoapIn" />
+      <wsdl:output message="tns:SincronizaT_PersonalConceptosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalFaltas">
+      <wsdl:input message="tns:SincronizaT_PersonalFaltasSoapIn" />
+      <wsdl:output message="tns:SincronizaT_PersonalFaltasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalFechas">
+      <wsdl:input message="tns:SincronizaT_PersonalFechasSoapIn" />
+      <wsdl:output message="tns:SincronizaT_PersonalFechasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_RegistroCorte">
+      <wsdl:input message="tns:SincronizaT_RegistroCorteSoapIn" />
+      <wsdl:output message="tns:SincronizaT_RegistroCorteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SincroDBServiceSoap" type="tns:SincroDBServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SincronizaC_Almacen">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Almacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_AreaModulo">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_AreaModulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Areas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Areas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_AreasRptEstatus">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_AreasRptEstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Articulos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Articulos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Bihorarios">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Bihorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Conceptos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Conceptos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_ConceptosP">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_ConceptosP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_EmpresaP">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_EmpresaP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Empresas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Empresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_GrosorAgujas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_GrosorAgujas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Hilos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Hilos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Lineas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Lineas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Maquinaria">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Maquinaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Marcas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Marcas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_MarcasAgujas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_MarcasAgujas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_ModeloAgujas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_ModeloAgujas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Modulos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Modulos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Monedas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Monedas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Operaciones">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Operaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_OperacionHilos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_OperacionHilos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Pantallas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Pantallas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Personal">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Personal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_PersonalFechas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_PersonalFechas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Proveedores">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Proveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Puestos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Puestos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_PuntasAgujas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_PuntasAgujas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Refacciones">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Refacciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Semanas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Semanas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Sueldos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Sueldos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Tallas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Tallas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_TiposMaquina">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_TiposMaquina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_TiposRegAguja">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_TiposRegAguja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Usuarios">
+      <soap:operation soapAction="http://SicroDBService/SincronizaC_Usuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaParametros">
+      <soap:operation soapAction="http://SicroDBService/SincronizaParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sincronizarpt_Estatus">
+      <soap:operation soapAction="http://SicroDBService/Sincronizarpt_Estatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Agujas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Agujas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Balanceo">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Balanceo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoMaq">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_BalanceoMaq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoOpDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_BalanceoOpDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoOtros">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_BalanceoOtros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoStaf">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_BalanceoStaf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Bitacora">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Bitacora" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizatT_Bultos">
+      <soap:operation soapAction="http://SicroDBService/SincronizatT_Bultos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_CostosMonedas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_CostosMonedas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Cotizacion">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Cotizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_CotizacionDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_CotizacionDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Estilos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Estilos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_EstilosDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosDetTeor">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_EstilosDetTeor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosHilosDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_EstilosHilosDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosHilosDetTeor">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_EstilosHilosDetTeor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosMarcas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_EstilosMarcas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EtiqFecPag">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_EtiqFecPag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Etiquetas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Etiquetas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Folios">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Folios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_HojasControl">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_HojasControl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Inventario">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Inventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MantoMaq">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_MantoMaq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MantoMaqDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_MantoMaqDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosAlm">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_MovimientosAlm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosAlmacenDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_MovimientosAlmacenDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosMaquinaria">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_MovimientosMaquinaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Nomina">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Nomina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_NominaDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_NominaDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdenesProduccion">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_OrdenesProduccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdEnPlanta">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_OrdEnPlanta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdenProduccionDet">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_OrdenProduccionDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdOrdenesProduccion">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_OrdOrdenesProduccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Perfil">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_Perfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalConceptos">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_PersonalConceptos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalFaltas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_PersonalFaltas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalFechas">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_PersonalFechas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_RegistroCorte">
+      <soap:operation soapAction="http://SicroDBService/SincronizaT_RegistroCorte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SincroDBServiceSoap12" type="tns:SincroDBServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SincronizaC_Almacen">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Almacen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_AreaModulo">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_AreaModulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Areas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Areas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_AreasRptEstatus">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_AreasRptEstatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Articulos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Articulos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Bihorarios">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Bihorarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Conceptos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Conceptos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_ConceptosP">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_ConceptosP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_EmpresaP">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_EmpresaP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Empresas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Empresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_GrosorAgujas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_GrosorAgujas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Hilos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Hilos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Lineas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Lineas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Maquinaria">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Maquinaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Marcas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Marcas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_MarcasAgujas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_MarcasAgujas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_ModeloAgujas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_ModeloAgujas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Modulos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Modulos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Monedas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Monedas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Operaciones">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Operaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_OperacionHilos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_OperacionHilos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Pantallas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Pantallas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Personal">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Personal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_PersonalFechas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_PersonalFechas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Proveedores">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Proveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Puestos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Puestos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_PuntasAgujas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_PuntasAgujas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Refacciones">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Refacciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Semanas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Semanas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Sueldos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Sueldos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Tallas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Tallas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_TiposMaquina">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_TiposMaquina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_TiposRegAguja">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_TiposRegAguja" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaC_Usuarios">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaC_Usuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaParametros">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sincronizarpt_Estatus">
+      <soap12:operation soapAction="http://SicroDBService/Sincronizarpt_Estatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Agujas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Agujas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Balanceo">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Balanceo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoMaq">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_BalanceoMaq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoOpDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_BalanceoOpDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoOtros">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_BalanceoOtros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_BalanceoStaf">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_BalanceoStaf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Bitacora">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Bitacora" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizatT_Bultos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizatT_Bultos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_CostosMonedas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_CostosMonedas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Cotizacion">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Cotizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_CotizacionDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_CotizacionDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Estilos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Estilos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_EstilosDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosDetTeor">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_EstilosDetTeor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosHilosDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_EstilosHilosDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosHilosDetTeor">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_EstilosHilosDetTeor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EstilosMarcas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_EstilosMarcas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_EtiqFecPag">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_EtiqFecPag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Etiquetas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Etiquetas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Folios">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Folios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_HojasControl">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_HojasControl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Inventario">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Inventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MantoMaq">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_MantoMaq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MantoMaqDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_MantoMaqDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosAlm">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_MovimientosAlm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosAlmacenDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_MovimientosAlmacenDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_MovimientosMaquinaria">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_MovimientosMaquinaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Nomina">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Nomina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_NominaDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_NominaDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdenesProduccion">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_OrdenesProduccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdEnPlanta">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_OrdEnPlanta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdenProduccionDet">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_OrdenProduccionDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_OrdOrdenesProduccion">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_OrdOrdenesProduccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_Perfil">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_Perfil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalConceptos">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_PersonalConceptos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalFaltas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_PersonalFaltas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_PersonalFechas">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_PersonalFechas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SincronizaT_RegistroCorte">
+      <soap12:operation soapAction="http://SicroDBService/SincronizaT_RegistroCorte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SincroDBService">
+    <wsdl:port name="SincroDBServiceSoap" binding="tns:SincroDBServiceSoap">
+      <soap:address location="http://181.123.14.83/SincroDBService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SincroDBServiceSoap12" binding="tns:SincroDBServiceSoap12">
+      <soap12:address location="http://181.123.14.83/SincroDBService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

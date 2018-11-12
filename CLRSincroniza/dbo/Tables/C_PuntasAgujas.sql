@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[C_PuntasAgujas] (
+    [PuntaID] NUMERIC (18)     IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
+    [Punta]   VARCHAR (50)     NULL,
+    [rowguid] UNIQUEIDENTIFIER CONSTRAINT [DF__C_PuntasA__rowgu__10CC3BD4] DEFAULT (newsequentialid()) ROWGUIDCOL NOT NULL,
+    CONSTRAINT [PK_C_PuntasAgujas] PRIMARY KEY CLUSTERED ([PuntaID] ASC) WITH (FILLFACTOR = 90)
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [index_1584776753]
+    ON [dbo].[C_PuntasAgujas]([rowguid] ASC) WITH (FILLFACTOR = 90);
+

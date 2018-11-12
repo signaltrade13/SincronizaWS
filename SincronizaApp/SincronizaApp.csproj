@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D97200F-7752-4A65-A8A5-3D2BD8289F70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SincronizaApp</RootNamespace>
+    <AssemblyName>SincronizaApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SincroDBService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Element.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainForm.Designer.cs">
+      <DependentUpon>_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainForm.resx">
+      <DependentUpon>_MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\SincroDBService\SincroDBService.wsdl" />
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_AlmacenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_AreaModuloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_AreasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_AreasRptEstatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_ArticulosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_BihorariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_ConceptosPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_ConceptosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_EmpresaPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_EmpresasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_GrosorAgujasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_HilosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_LineasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_MaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_MarcasAgujasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_MarcasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_ModeloAgujasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_ModulosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_MonedasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_OperacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_OperacionHilosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_PantallasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_PersonalFechasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_PersonalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_ProveedoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_PuestosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_PuntasAgujasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_RefaccionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_SemanasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_SueldosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_TallasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_TiposMaquinaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_TiposRegAgujaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaC_UsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.Sincronizarpt_EstatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizatT_BultosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_AgujasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_BalanceoMaqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_BalanceoOpDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_BalanceoOtrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_BalanceoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_BalanceoStafResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_BitacoraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_CostosMonedasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_CotizacionDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_CotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EstilosDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EstilosDetTeorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EstilosHilosDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EstilosHilosDetTeorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EstilosMarcasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EstilosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EtiqFecPagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_EtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_FoliosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_HojasControlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_InventarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_MantoMaqDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_MantoMaqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_MovimientosAlmacenDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_MovimientosAlmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_MovimientosMaquinariaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_NominaDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_NominaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_OrdenesProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_OrdEnPlantaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_OrdenProduccionDetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_OrdOrdenesProduccionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_PerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_PersonalConceptosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_PersonalFaltasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_PersonalFechasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SincroDBService\SincronizaApp.SincroDBService.SincronizaT_RegistroCorteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SincroDBService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SincroDBService\SincroDBService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SincroDBService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SincroDBService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SincroDBService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SincronizaWS.Metodos\SincronizaWS.Metodos.csproj">
+      <Project>{24e63bbf-90d6-49d8-be00-98ec74f856d1}</Project>
+      <Name>SincronizaWS.Metodos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

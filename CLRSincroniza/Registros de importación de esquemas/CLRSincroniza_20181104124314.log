@@ -1,0 +1,85 @@
+03/11/2018 21:43:14	Este registro contiene información acerca de la operación de importación de esquema en el proyecto 'CLRSincroniza' del equipo 'ENVY27I5' por el usuario 'signa'.
+03/11/2018 21:43:14	Se inició la importación del esquema de la base de datos.
+03/11/2018 21:43:21	Recopilando credenciales de la base de datos
+03/11/2018 21:43:21	Recopilando opciones de base de datos
+03/11/2018 21:43:21	Recopilando la opción de configuración de ámbito de la base de datos genérica
+03/11/2018 21:43:21	Recopilando usuarios
+03/11/2018 21:43:21	Recopilando roles
+03/11/2018 21:43:21	Recopilando roles de aplicación
+03/11/2018 21:43:21	Recopilando pertenencias a roles
+03/11/2018 21:43:21	Recopilando grupos de archivos
+03/11/2018 21:43:21	Recopilando catálogos de texto completo
+03/11/2018 21:43:21	Recopilando ensamblados
+03/11/2018 21:43:22	Recopilando certificados
+03/11/2018 21:43:22	Recopilando claves asimétricas
+03/11/2018 21:43:22	Recopilando claves simétricas
+03/11/2018 21:43:22	Recopilando claves simétricas cifradas
+03/11/2018 21:43:22	Recopilando esquemas
+03/11/2018 21:43:22	Recopilando colecciones de esquemas XML
+03/11/2018 21:43:22	Recopilando tipos de datos definidos por el usuario
+03/11/2018 21:43:22	Recopilando tipos definidos por el usuario
+03/11/2018 21:43:22	Recopilando tipos de tabla
+03/11/2018 21:43:22	Recopilando claves únicas para tipos de tabla
+03/11/2018 21:43:22	Recopilando claves principales para tipos de tabla
+03/11/2018 21:43:22	Recopilando índices para tipos de tablas
+03/11/2018 21:43:22	Recopilando restricciones CHECK para tipos de tabla
+03/11/2018 21:43:22	Recopilando restricciones DEFAULT para tipos de tabla
+03/11/2018 21:43:22	Recopilando funciones de partición
+03/11/2018 21:43:22	Recopilando esquemas de partición
+03/11/2018 21:43:22	Recopilando funciones
+03/11/2018 21:43:22	Recopilando funciones cifradas
+03/11/2018 21:43:22	Recopilando agregados
+03/11/2018 21:43:22	Recopilando procedimientos
+03/11/2018 21:43:23	Recopilando procedimientos cifrados
+03/11/2018 21:43:23	Recopilando tablas
+03/11/2018 21:43:23	Recopilando claves principales
+03/11/2018 21:43:23	Recopilando restricciones UNIQUE
+03/11/2018 21:43:23	Recopilando claves externas
+03/11/2018 21:43:23	Recopilando restricciones DEFAULT
+03/11/2018 21:43:23	Recopilando restricciones CHECK
+03/11/2018 21:43:23	Recopilando vistas
+03/11/2018 21:43:23	Recopilando vistas cifradas
+03/11/2018 21:43:23	Recopilando índices
+03/11/2018 21:43:23	Recopilando estadísticas
+03/11/2018 21:43:23	Recopilando listas de palabras irrelevantes de índices de texto completo
+03/11/2018 21:43:23	Recopilando listas de propiedades de búsqueda
+03/11/2018 21:43:23	Recopilando propiedades de búsqueda
+03/11/2018 21:43:23	Recopilando índices de texto completo
+03/11/2018 21:43:23	Recopilando índices de almacenamiento de columnas
+03/11/2018 21:43:23	Recopilando índices espaciales
+03/11/2018 21:43:23	Recopilando índices XML
+03/11/2018 21:43:23	Recopilando índices XML selectivos
+03/11/2018 21:43:23	Recopilando desencadenadores cifrados
+03/11/2018 21:43:23	Recopilando desencadenadores
+03/11/2018 21:43:23	Recopilando DDL triggers cifrados y de CLR
+03/11/2018 21:43:23	Recopilando DDL triggers
+03/11/2018 21:43:23	Recopilando sinónimos
+03/11/2018 21:43:23	Recopilando valores predeterminados
+03/11/2018 21:43:23	Recopilando enlaces UDDT de restricción de datos
+03/11/2018 21:43:23	Recopilando reglas
+03/11/2018 21:43:23	Recopilando enlaces UDDT de restricción de datos
+03/11/2018 21:43:23	Recopilando tipos de mensaje
+03/11/2018 21:43:23	Recopilando colas
+03/11/2018 21:43:23	Recopilando contratos
+03/11/2018 21:43:23	Recopilando servicios
+03/11/2018 21:43:23	Recopilando notificaciones de eventos
+03/11/2018 21:43:23	Recopilando enlaces de servicio remoto
+03/11/2018 21:43:23	Recopilando prioridades de Broker
+03/11/2018 21:43:23	Recopilando firmas
+03/11/2018 21:43:23	Recopilando opciones de compresión de datos
+03/11/2018 21:43:23	Recopilando tipos de secuencia
+03/11/2018 21:43:23	Recopilando directivas de seguridad
+03/11/2018 21:43:23	Recopilar claves de cifrado de columna
+03/11/2018 21:43:23	Recopilando claves maestras de columna
+03/11/2018 21:43:23	Recopilando orígenes de datos externos
+03/11/2018 21:43:23	Recopilando formatos de archivo externos
+03/11/2018 21:43:23	Recopilando tablas externas
+03/11/2018 21:43:23	Recopilando propiedades extendidas
+03/11/2018 21:43:24	Recopilando credenciales
+03/11/2018 21:43:24	Recopilando inicios de sesión
+03/11/2018 21:43:24	Recopilando auditorías de servidor
+03/11/2018 21:43:25	Buscando elementos duplicados en el proyecto
+03/11/2018 21:43:25	Ha finalizado el procesamiento de los elementos duplicados
+03/11/2018 21:43:27	Finalizó la importación de la base de datos.
+03/11/2018 21:43:27	Se guardó un resumen de la importación en la siguiente ubicación: C:\Signaltrade13\Proyectos\SincronizaWS.Servicio\CLRSincroniza\Registros de importación de esquemas\CLRSincroniza_20181104124314.log
+03/11/2018 21:43:27	Haga clic en Finalizar para continuar...

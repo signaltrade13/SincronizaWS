@@ -1,0 +1,11 @@
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\bin\Release\CLRSincroniza.dacpac
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\bin\Release\CLRSincroniza.dll
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\bin\Release\CLRSincroniza.pdb
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\obj\Release\Model.xml
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\obj\Release\refactor.xml
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\obj\Release\postdeploy.sql
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\obj\Release\predeploy.sql
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\obj\Release\CLRSincroniza.dll
+C:\images\C99\SincronizaWS.Servicio10\CLRSincroniza\obj\Release\CLRSincroniza.pdb
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\CLRSincroniza\obj\Release\CLRSincroniza.dll
+C:\Signaltrade13\Repositorios\SincronizaWS.Servicio\CLRSincroniza\obj\Release\CLRSincroniza.pdb

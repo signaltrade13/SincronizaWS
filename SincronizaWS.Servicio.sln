@@ -28,6 +28,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SincronizaWS.Servicio", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizaWS.Metodos", "SincronizaWS.Metodos\SincronizaWS.Metodos.csproj", "{24E63BBF-90D6-49D8-BE00-98EC74F856D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SincronizaApp", "SincronizaApp\SincronizaApp.csproj", "{3D97200F-7752-4A65-A8A5-3D2BD8289F70}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CLRSincroniza", "CLRSincroniza\CLRSincroniza.sqlproj", "{916872F9-4559-413D-949A-C1BE0A8A95C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +46,16 @@ Global
 		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24E63BBF-90D6-49D8-BE00-98EC74F856D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D97200F-7752-4A65-A8A5-3D2BD8289F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D97200F-7752-4A65-A8A5-3D2BD8289F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D97200F-7752-4A65-A8A5-3D2BD8289F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D97200F-7752-4A65-A8A5-3D2BD8289F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916872F9-4559-413D-949A-C1BE0A8A95C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916872F9-4559-413D-949A-C1BE0A8A95C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916872F9-4559-413D-949A-C1BE0A8A95C6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{916872F9-4559-413D-949A-C1BE0A8A95C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916872F9-4559-413D-949A-C1BE0A8A95C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916872F9-4559-413D-949A-C1BE0A8A95C6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
